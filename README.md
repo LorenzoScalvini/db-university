@@ -19,3 +19,11 @@ SELECT *
 FROM courses 
 WHERE cfu > 10;
 ```
+
+## 3. Selezionare tutti i corsi che valgono più di 10 crediti (479)
+
+```sql
+SELECT * 
+FROM students 
+WHERE YEAR(CURDATE()) - YEAR(date_of_birth) > 30;
+```

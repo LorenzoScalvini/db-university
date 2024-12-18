@@ -51,5 +51,32 @@ WHERE date = '2020-06-20' AND TIME(hour) > '14:00:00';
 ## 7. Da quanti dipartimenti è composta l'università? (12)
 
 ```sql
+SELECT COUNT(*) AS numero_dipartimenti 
+FROM departments;
+```
+
+## 8. Da quanti dipartimenti è composta l'università? (12)
+
+```sql
+SELECT COUNT(*) AS insegnanti_senza_telefono 
+FROM teachers 
+WHERE phone IS NULL;
+```
+
+## 9. Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo degree_id, inserire un valore casuale)
+
+```sql
+
+```
+
+## 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
+
+```sql
+
+```
+
+## 11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9
+
+```sql
 
 ```

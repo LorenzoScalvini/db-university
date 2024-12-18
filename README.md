@@ -72,7 +72,7 @@ WHERE phone IS NULL;
 ## 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
 
 ```sql
-
+UPDATE teachers SET office_number = 126 WHERE name = 'Pietro' AND surname = 'Rizzo';
 ```
 
 ## 11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9

@@ -106,7 +106,10 @@ ORDER BY numero_insegnanti DESC;
 ## 3. Calcolare la media dei voti di ogni appello d'esame
 
 ```sql
-
+SELECT exam_id, AVG(vote) AS media_voti
+FROM exam_student
+GROUP BY exam_id
+ORDER BY exam_id;
 ```
 
 ## 4. Contare quanti corsi di laurea ci sono per ogni dipartimento

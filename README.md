@@ -4,7 +4,7 @@
 
 Dopo aver creato un nuovo database nel MySQL Workbench e aver importato lo schema allegato, eseguire le seguenti query.
 
-###Query GROUP BY
+### Query SELECT
 
 ## 1. Selezionare tutti gli studenti nati nel 1990 (160)
 
@@ -83,7 +83,7 @@ UPDATE teachers SET office_number = 126 WHERE name = 'Pietro' AND surname = 'Riz
 
 ```
 
-###Query Group By
+### Query GROUP BY
 
 ## 1. Contare quanti iscritti ci sono stati ogni anno
 
@@ -96,7 +96,11 @@ ORDER BY anno_iscrizione;
 
 ## 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 ```sql
-
+SELECT office_address, COUNT(*) AS numero_insegnanti
+FROM teachers
+GROUP BY office_address
+HAVING numero_insegnanti > 1
+ORDER BY numero_insegnanti DESC;
 ```
 
 ## 3. Calcolare la media dei voti di ogni appello d'esame
